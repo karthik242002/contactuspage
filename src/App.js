@@ -4,6 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 import ContactPage from "./pages/ContactPage";
 import { useEffect } from "react";
 
@@ -27,6 +28,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/contact-page":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -45,7 +50,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<ContactPage />} />
+      <Route path="/" element={<TermsAndConditionsPage />} />
+      <Route path="/contact-page" element={<ContactPage />} />
     </Routes>
   );
 }
